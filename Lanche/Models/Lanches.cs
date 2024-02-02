@@ -14,13 +14,13 @@ namespace Lanche.Models
         public string Nome { get; set; }
 
         [Required(ErrorMessage = "O nome do lanche deve ser informado")]
-        [Display(Name = "Nome do lanche")]
+        [Display(Name = "Descrição do Lanche")]
         [MinLength(20, ErrorMessage = "Descrição deve ter no mínimo {1} caracteres")]
         [MaxLength(200, ErrorMessage = "Descrição podr exceder {1} caracteres")]
         public string DescricaoCurta { get; set; }
 
         [Required(ErrorMessage = "O nome do lanche deve ser informado")]
-        [Display(Name = "Nome do lanche")]
+        [Display(Name = "Descrição detalhada do lanche")]
         [MinLength(20, ErrorMessage = "Descrição deve ter no mínimo {1} caracteres")]
         [MaxLength(200, ErrorMessage = "Descrição podr exceder {1} caracteres")]
         public string DescricaoDetalhada { get; set; }
