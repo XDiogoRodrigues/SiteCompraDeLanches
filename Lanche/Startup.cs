@@ -21,8 +21,11 @@ public class Startup
 
         services.AddTransient<ICategoriaRepositorio, CategoriaRepositorio>();
         services.AddTransient<ILancheRepositorio, LancheRepositorio>();
+        services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
 
         services.AddControllersWithViews();
+        services.AddMemoryCache();
+        services.AddSession();
     }
 
     public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
@@ -41,6 +44,7 @@ public class Startup
         app.UseStaticFiles();
 
         app.UseRouting();
+        app.UseSession();
 
         app.UseAuthorization();
 

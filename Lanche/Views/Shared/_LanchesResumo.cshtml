@@ -1,0 +1,8 @@
+﻿@model Lanches
+
+<div class="col-sm-4 col-md-4 col-lg-4">
+	<p><img src="@Model.ImageUrl" class="img-fluid" /></p>
+	<p><strong>Preço: @Model.Preco.ToString("c")</strong></p>
+	<h4>@Model.Nome</h4>
+	<p>@Model.DescricaoCurta</p>
+</div>
